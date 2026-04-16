@@ -13,13 +13,13 @@ read_csv("data/denom_limits.csv") -> denom_limits
 # FUNCTIONS ----
 
 # source R script for OR calculations
-source("OR_pvalue_checker.R")
+source("functions/OR_pvalue_checker.R")
 
 # source python script which gives LR calculation
-source_python("lrcalc_functions.updated-thresholds.py")
+source_python("functions/lrcalc_functions.updated-thresholds.py")
 
-# source
-source("output_functions.R")
+# source enrichment factor and batch functions
+source("functions/output_functions.R")
 
 # filter for PTV variants (VEP consequences)
 consequence_filter = c("stop_gained","splice_acceptor_variant","splice_donor_variant","frameshift_variant")
